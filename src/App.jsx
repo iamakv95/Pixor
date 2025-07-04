@@ -1,4 +1,4 @@
-import Routes from './router/routes'
+import Routes from './router/Routes'
 
 const App = () => {
   return <Routes/>
