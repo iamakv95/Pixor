@@ -1,3 +1,4 @@
 import Header from "./Header"
 import Footer from "./Footer"
-export {Header, Footer}
+import VideoPlayer from "./VideoPlayer"
+export {Header, Footer,VideoPlayer}

@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-dmSans: "DM Sans", "sans-serif";
+  --font-anton: "Anton", "sans-serif";
   --breakpoint-*: initial;
-  --breakpoint-lg: 1280px;
+  --breakpoint-sm: 500px;
+  --breakpoint-md: 767px;
+  --breakpoint-lg: 1025px;
+  --breakpoint-xl: 1280px;
   --color-*: initial;
-  --color-white:#ffffff;
-  --color-dark:#1D1D1D;
-  --color-gray:#2A2A2A;
-  --color-red:#FF2D55;
-  --color-accent:#FFFCF6;
-  --color-border:#f3f3f3;
-  --color-transparent:transparent;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark: #1d1d1d;
+  --color-gray: #2a2a2a;
+  --color-red: #ff2d55;
+  --color-accent: #fffcf6;
+  --color-border: #f3f3f3;
+  --color-transparent: transparent;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -23,6 +28,20 @@
     border-radius: var(--rounded-lg);
     padding: var(--spacing-6);
     box-shadow: var(--shadow-xl);
+  }
+
+  .video-with-seekbar::-webkit-media-controls-play-button,
+  .video-with-seekbar::-webkit-media-controls-volume-slider,
+  .video-with-seekbar::-webkit-media-controls-mute-button,
+  .video-with-seekbar::-webkit-media-controls-fullscreen-button,
+  .video-with-seekbar::-webkit-media-controls-current-time-display,
+  .video-with-seekbar::-webkit-media-controls-time-remaining-display {
+    display: none !important;
+  }
+
+  /* Show only seekbar */
+  .video-with-seekbar::-webkit-media-controls-timeline {
+    display: block !important;
   }
 }
 @utility container {
