@@ -17,14 +17,14 @@ const ServiceCard = ({
         alt="hero"
         className="rounded-2xl mb-4 w-full min-h-[200px] object-cover"
       />
-      <h4 className="text-xl px-4">
+      <h4 className="text-xl px-4 text-center max-sm:text-lg">
         {preTitle} <span className="text-red">{highlightTitle}</span>{" "}
         {postTitle}
       </h4>
       <p className="text-sm text-center text-gray px-4">{description}</p>
       <Link
         to={linkHref}
-        className="text-red text-base flex items-center gap-1 mt-2"
+        className="text-red text-base max-sm:text-sm flex items-center gap-1 mt-2"
       >
         <span>{linkTitle}</span>
         <MdArrowOutward className="opacity-70" />

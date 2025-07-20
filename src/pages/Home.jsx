@@ -273,7 +273,7 @@ const Home = () => {
         </div>
       </section>
       <section className="bg-white mt-20 font-dmSans">
-        <div className="container flex flex-col items-center justify-center gap-8 ">
+        <div className="container flex flex-col items-center justify-center gap-8">
           <h2 className="text-dark font-bold text-4xl text-center">
             Our <span className="text-red">Team</span>
           </h2>
@@ -283,9 +283,9 @@ const Home = () => {
             electronics etc...
           </p>
         </div>
-        <div className="mt-10 bg-accent py-20 flex flex-col justify-center items-center gap-6">
+        <div className="mt-10 bg-accent py-20 flex flex-col justify-center items-center gap-6 px-4">
           <img src={brands} alt="team" className="w-[200px]" />
-          <h3 className="text-dark font-bold text-5xl text-center">
+          <h3 className="text-dark font-bold text-5xl text-center max-md:text-4xl">
             Still have question?
           </h3>
           <p className="text-lg text-dark text-center max-w-[550px]">
