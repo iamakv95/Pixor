@@ -5,7 +5,7 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
     <div className="border-b border-accent">
       <button
         onClick={onClick}
-        className="w-full flex justify-between items-center py-4 text-left text-xl font-medium text-white"
+        className="w-full flex justify-between items-center py-4 text-left text-xl max-md:text-lg font-medium text-white"
       >
         {title}
         {isOpen ? < HiMinus/> : <HiPlus />}

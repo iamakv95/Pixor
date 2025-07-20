@@ -10,6 +10,13 @@ import {
   tata,
   jac,
   techron,
+  img1,
+  img2,
+  img4,
+  img6,
+  img7,
+  img8,
+  img9,
 } from "../assets";
 
 export const navLinksLeft = [
@@ -43,41 +50,41 @@ export const navLinksRight = [
 export const servicesCardHome = [
   {
     imgSrc: amazonHero,
-    preTitle: "Amazon 1",
+    preTitle: "Amazon",
     highlightTitle: "Hero",
     postTitle: "",
     description:
-      "Connect with your buyers with visuals that bring clicks at first sight 1",
+      "Connect with your buyers with visuals that bring clicks at first sight",
     linkHref: "/",
     linkTitle: "View our portfolio",
   },
   {
     imgSrc: amazonHero,
-    preTitle: "Amazon 2",
+    preTitle: "Amazonn",
     highlightTitle: "Hero",
     postTitle: "2",
     description:
-      "Connect with your buyers with visuals that bring clicks at first sight 2",
+      "Connect with your buyers with visuals that bring clicks at first sight",
     linkHref: "/",
     linkTitle: "View our portfolio",
   },
-    {
+  {
     imgSrc: amazonHero,
-    preTitle: "Amazon 3",
+    preTitle: "Amazons",
     highlightTitle: "Hero",
     postTitle: "2",
     description:
-      "Connect with your buyers with visuals that bring clicks at first sight 2",
+      "Connect with your buyers with visuals that bring clicks at first sight",
     linkHref: "/",
     linkTitle: "View our portfolio",
   },
-    {
+  {
     imgSrc: amazonHero,
-    preTitle: "Amazon 4",
+    preTitle: "Amazonz",
     highlightTitle: "Hero",
     postTitle: "2",
     description:
-      "Connect with your buyers with visuals that bring clicks at first sight 2",
+      "Connect with your buyers with visuals that bring clicks at first sight",
     linkHref: "/",
     linkTitle: "View our portfolio",
   },
@@ -253,5 +260,66 @@ export const clientsLogo = [
     imgSrc: techron,
     imgAlt: "techron5",
   },
+];
 
+export const portfolioImageSliderLeft = [
+  {
+    imgSrc: img1,
+    imgAlt: "img1",
+  },
+  {
+    imgSrc: img2,
+    imgAlt: "img2",
+  },
+  {
+    imgSrc: img4,
+    imgAlt: "img3",
+  },
+  {
+    imgSrc: img6,
+    imgAlt: "img4",
+  },
+  {
+    imgSrc: img7,
+    imgAlt: "img5",
+  },
+  {
+    imgSrc: img8,
+    imgAlt: "img6",
+  },
+  {
+    imgSrc: img9,
+    imgAlt: "img7",
+  },
+];
+
+export const portfolioImageSliderRight = [
+  {
+    imgSrc: img1,
+    imgAlt: "img1",
+  },
+  {
+    imgSrc: img2,
+    imgAlt: "img2",
+  },
+  {
+    imgSrc: img4,
+    imgAlt: "img3",
+  },
+  {
+    imgSrc: img6,
+    imgAlt: "img4",
+  },
+  {
+    imgSrc: img7,
+    imgAlt: "img5",
+  },
+  {
+    imgSrc: img8,
+    imgAlt: "img6",
+  },
+  {
+    imgSrc: img9,
+    imgAlt: "img7",
+  },
 ];

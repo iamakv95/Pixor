@@ -1,12 +1,19 @@
 import { Link } from "react-router";
 import { amazonHero, brands, clients, slider } from "../assets";
-import { ServiceCard, VideoPlayer, WhatsOurPoints } from "../components";
+import {
+  ImageSlider,
+  ServiceCard,
+  VideoPlayer,
+  WhatsOurPoints,
+} from "../components";
 import { coverImg, video } from "../assets";
-import { MdArrowOutward } from "react-icons/md";
 import { useState } from "react";
+import "swiper/css";
 import {
   accordionData,
   clientsLogo,
+  portfolioImageSliderLeft,
+  portfolioImageSliderRight,
   servicesCardHome,
   whatsOutPointsNegative,
   whatsOutPointsPositive,
@@ -24,16 +31,16 @@ const Home = () => {
   return (
     <>
       <section className="bg-accent font-dmSans">
-        <div className="container min-h-[700px] max-xl:min-h-auto max-lg:pb-10 flex flex-col items-center justify-center gap-8 pt-20">
-          <h1 className="text-dark font-bold text-4xl leading-tight text-center max-w-1/2 max-lg:max-w-full">
-            Want to <span className="text-red">SELL</span> more on the Amazon
-            marketplace?
+        <div className="container min-h-[700px] max-xl:min-h-auto max-lg:pb-10 flex flex-col items-center justify-center gap-5 pt-20">
+          <h1 className="text-dark font-bold text-4xl leading-tight text-center max-w-[570px]">
+            Want to <span className="text-red">sell</span> more on the
+            <span className="text-5xl"> Amazon marketplace?</span>
           </h1>
-          <p className="text-gray text-xl text-center max-w-[60%] max-lg:max-w-full">
+          <p className="text-gray text-xl text-center max-w-[600px]">
             Get better product pages & storefronts by creative marketers who
             make your products stand out & SELL!
           </p>
-          <div className="flex items-center gap-8 mt-4 max-md:flex-wrap max-md:justify-center">
+          <div className="flex items-center gap-8 mt-6 max-md:flex-wrap max-md:justify-center">
             <Link className="bg-red border-red border-2 text-white text-lg leading-tight py-2.5 px-8 rounded-full">
               View our portfolio
             </Link>
@@ -41,15 +48,15 @@ const Home = () => {
               Let’s book a call
             </Link>
           </div>
-          <img src={clients} alt="clients" className="mt-6" />
+          <img src={clients} alt="clients" className="mt-10" />
         </div>
       </section>
       <section className="bg-white font-dmSans pt-20 pb-4">
         <div className="container flex flex-col items-center justify-center gap-8">
-          <h2 className="text-dark font-bold text-4xl">
+          <h2 className="text-dark font-bold text-4xl text-center">
             Our <span className="text-red">Forte?</span>
           </h2>
-          <p className="text-gray text-xl text-center max-w-[65%]">
+          <p className="text-gray text-lg text-center max-w-[690px]">
             With extensive experience across diverse product categories
             including healthcare, FMCG, kitchen, fashion, beauty, nutrition,
             electronics etc...
@@ -88,16 +95,16 @@ const Home = () => {
       </section>
       <section className="bg-white font-dmSans pt-20 pb-4">
         <div className="container flex flex-col items-center justify-center gap-8">
-          <h2 className="text-dark font-bold text-4xl">
+          <h2 className="text-dark font-bold text-4xl text-center">
             Our <span className="text-red">Services</span>
           </h2>
-          <p className="text-gray text-xl text-center max-w-[65%]">
+          <p className="text-gray text-lg text-center max-w-[690px]">
             With extensive experience across diverse product categories
             including healthcare, FMCG, kitchen, fashion, beauty, nutrition,
             electronics etc...
           </p>
         </div>
-        <div className="container grid grid-cols-4 justify-between max-xl:grid-cols-2 max-md:justify-center max-md:grid-cols-1 gap-x-9 gap-y-12 mt-10">
+        <div className="container grid grid-cols-4 justify-between max-xl:grid-cols-2 max-md:justify-center gap-x-9 gap-y-12 mt-10">
           {servicesCardHome.map((item) => (
             <ServiceCard
               key={item.preTitle}
@@ -112,20 +119,31 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className="bg-dark font-dmSans mt-20 mb-4 h-[90vh]">
-        <img src={slider} alt="" className="w-full h-full object-cover" />
+      <section className="bg-black font-dmSans mt-20 mb-4 flex flex-col gap-3 py-3">
+        <ImageSlider
+          imageList={portfolioImageSliderLeft}
+          direction="left"
+          Fast={35}
+          Slow={60}
+        />
+        <ImageSlider
+          imageList={portfolioImageSliderRight}
+          direction="right"
+          Fast={35}
+          Slow={60}
+        />
       </section>
       <section className="bg-red w-full relative font-dmSans">
-        <div className="container flex h-[500px] items-stretch">
-          <div className="absolute left-0 top-0 w-1/2 h-full">
+        <div className="container flex h-[500px] max-md:h-auto items-stretch justify-between max-sm:flex-col">
+          <div className="absolute -left-1 w-1/2 h-full max-sm:w-full max-sm:h-[350px] max-sm:left-0">
             <img
               src={amazonHero}
               alt="Amazon Hero"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-1/2"></div>
-          <div className="w-1/2 flex flex-col justify-center relative pl-[15%]">
+          <div className="w-1/2 max-sm:w-full max-sm:h-[350px]"></div>
+          <div className="w-1/2 flex flex-col justify-center relative pl-[15%] max-md:pl-0 max-md:py-12 max-sm:py-16 max-sm:w-full">
             <h2 className="text-4xl font-bold text-white mb-6">Why Us?</h2>
             <div className="block">
               {accordionData.map((item, index) => (
@@ -143,11 +161,11 @@ const Home = () => {
       </section>
       <section className="bg-white font-dmSans pt-20 pb-4">
         <div className="container flex flex-col items-center justify-center gap-8">
-          <h2 className="text-dark font-bold text-4xl">
+          <h2 className="text-dark font-bold text-center text-4xl">
             Go from boring to <span className="text-red">Brilliance</span>
           </h2>
         </div>
-        <div className="container flex justify-between gap-16">
+        <div className="container flex justify-between gap-16 mt-8">
           <div className="flex flex-col gap-8">
             <img
               src={amazonHero}
@@ -186,12 +204,12 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-red mt-20 p-20 font-dmSans">
-        <div className="container flex flex-col items-center justify-center gap-8 px-[350px]">
-          <h2 className="text-white font-bold text-4xl text-center">
+      <section className="bg-red mt-20 py-20 font-dmSans">
+        <div className="container flex flex-col items-center justify-center gap-8">
+          <h2 className="text-white font-bold text-4xl text-center max-w-[550px] ">
             Want to SELL more on the Amazon marketplace?
           </h2>
-          <p className="text-center text-white">
+          <p className="text-center text-lg text-white max-w-[590px]">
             Get better product pages & storefronts by creative marketers who
             make your products stand out & SELL!
           </p>
@@ -205,11 +223,11 @@ const Home = () => {
           <h2 className="text-dark font-bold text-4xl text-center">
             Our <span className="text-red">clients</span>
           </h2>
-          <p className="text-center text-dark">
+          <p className="text-center text-lg text-dark max-w-[590px]">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam,
             itaque.
           </p>
-          <div className="w-full mt-10 grid grid-cols-8 gap-12 items-center justify-center">
+          <div className="w-full mt-10 grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-5 max-md:grid-cols-4 gap-12 items-center justify-center">
             {clientsLogo.map((item) => (
               <img
                 src={item.imgSrc}
@@ -226,7 +244,7 @@ const Home = () => {
           <h2 className="text-dark font-bold text-4xl text-center">
             client <span className="text-red">Testimonials</span>
           </h2>
-          <div className="w-full mt-2 grid grid-cols-3 gap-12 items-center justify-center">
+          <div className="w-full mt-2 grid grid-cols-3 max-md:grid-cols-1 gap-12 max-xl:gap-8 max-lg:gap-6 items-center justify-center">
             <VideoReview
               clientName="Client 1"
               clientPosition="Position 1"
@@ -259,18 +277,18 @@ const Home = () => {
           <h2 className="text-dark font-bold text-4xl text-center">
             Our <span className="text-red">Team</span>
           </h2>
-          <p className="text-center text-dark">
+          <p className="text-center text-lg text-dark max-w-[590px]">
             With extensive experience across diverse product categories
             including healthcare, FMCG, kitchen, fashion, beauty, nutrition,
             electronics etc...
           </p>
         </div>
-        <div className="mt-10 bg-accent px-24 py-30 flex flex-col justify-center items-center gap-10">
+        <div className="mt-10 bg-accent py-20 flex flex-col justify-center items-center gap-6">
           <img src={brands} alt="team" className="w-[200px]" />
           <h3 className="text-dark font-bold text-5xl text-center">
             Still have question?
           </h3>
-          <p className="text-lg text-gray">
+          <p className="text-lg text-dark text-center max-w-[550px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea delectus
             perferendis quia, quidem labore alias.
           </p>

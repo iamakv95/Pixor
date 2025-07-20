@@ -17,7 +17,7 @@
   --color-red: #ff2d55;
   --color-accent: #fffcf6;
   --color-border: #f3f3f3;
-  --color-green:#31b724;
+  --color-green: #31b724;
   --color-transparent: transparent;
 }
 
@@ -47,8 +47,11 @@
 }
 @utility container {
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   @media (width >= theme(--breakpoint-lg)) {
-    padding-inline: 2rem;
+    padding-inline: 3rem;
+  }
+  @media (width <= theme(--breakpoint-xl)) {
+   max-width: 100%;
   }
 }
