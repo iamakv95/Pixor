@@ -17,6 +17,13 @@ import img6 from "./portfolios/img6.jpg";
 import img7 from "./portfolios/img7.jpg";
 import img8 from "./portfolios/img8.jpg";
 import img9 from "./portfolios/img9.jpg";
+import alibabab from "./platforms/alibabab.svg";
+import amamzon from "./platforms/amamzon.svg";
+import ebay from "./platforms/ebay.svg";
+import flipkart from "./platforms/flipkart.svg";
+import indiamart from "./platforms/indiamart.svg";
+import indiamart1 from "./platforms/indiamart.jpg";
+import myntra from "./platforms/myntra.svg";
 export {
   darkLogo,
   clients,
@@ -37,4 +44,11 @@ export {
   img7,
   img8,
   img9,
+  indiamart,
+  indiamart1,
+  myntra,
+  amamzon,
+  flipkart,
+  alibabab,
+  ebay,
 };

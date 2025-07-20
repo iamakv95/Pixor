@@ -12,6 +12,7 @@ import "swiper/css";
 import {
   accordionData,
   clientsLogo,
+  heroclients,
   portfolioImageSliderLeft,
   portfolioImageSliderRight,
   servicesCardHome,
@@ -48,7 +49,11 @@ const Home = () => {
               Let’s book a call
             </Link>
           </div>
-          <img src={clients} alt="clients" className="mt-10" />
+          <div className="flex items-center gap-8 mt-10 flex-wrap">
+            {heroclients.map((item) => (
+              <img src={item.imgSrc} alt={item.imgAlt} className="w-24 h-auto object-contain" />
+            ))}
+          </div>
         </div>
       </section>
       <section className="bg-white font-dmSans pt-20 pb-4">

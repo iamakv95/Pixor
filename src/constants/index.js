@@ -17,6 +17,13 @@ import {
   img7,
   img8,
   img9,
+  indiamart,
+  indiamart1,
+  myntra,
+  amamzon,
+  flipkart,
+  alibabab,
+  ebay,
 } from "../assets";
 
 export const navLinksLeft = [
@@ -321,5 +328,32 @@ export const portfolioImageSliderRight = [
   {
     imgSrc: img9,
     imgAlt: "img7",
+  },
+];
+export const heroclients = [
+  {
+    imgSrc: amamzon,
+    imgAlt: "amamzon",
+  },
+  {
+    imgSrc: flipkart,
+    imgAlt: "flipkart",
+  },
+  {
+    imgSrc: alibabab,
+    imgAlt: "alibabab",
+  },
+  ,
+  {
+    imgSrc: indiamart1,
+    imgAlt: "indiamart",
+  },
+  {
+    imgSrc: myntra,
+    imgAlt: "myntra",
+  },
+  {
+    imgSrc: ebay,
+    imgAlt: "ebay",
   },
 ];
