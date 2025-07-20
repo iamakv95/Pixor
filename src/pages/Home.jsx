@@ -227,7 +227,7 @@ const Home = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam,
             itaque.
           </p>
-          <div className="w-full mt-10 grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-5 max-md:grid-cols-4 gap-12 items-center justify-center">
+          <div className="w-full mt-10 grid grid-cols-8 max-xl:grid-cols-6 max-lg:grid-cols-5 max-md:grid-cols-4 gap-12 items-center justify-center max-md:gap-6">
             {clientsLogo.map((item) => (
               <img
                 src={item.imgSrc}
